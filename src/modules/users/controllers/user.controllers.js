@@ -15,6 +15,7 @@ export class UserController {
       }
     }
   };
+
   getAllUsers = async (req, res) => {
     try {
       const users = await userServices.getAllUsers();
@@ -47,6 +48,7 @@ export class UserController {
       }
     }
   };
+
   updateUser = async (req, res) => {
     try {
       const { uid } = req.params;
@@ -62,6 +64,7 @@ export class UserController {
       }
     }
   };
+
   deleteUser = async (req, res) => {
     try {
       const { uid } = req.params;

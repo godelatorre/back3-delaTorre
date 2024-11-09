@@ -1,0 +1,34 @@
+paths:
+  /api/adoptions/{uid}/{pid}/:
+    post:
+      summary: Post Adoption
+      description: Create a new Adoption
+      tags:
+        - Adoptions
+      parameters:
+        - in: path
+          name: uid
+          required: true
+          description: ID User
+          schema:
+            type: string
+        - in: path
+          name: pid
+          required: true
+          description: ID Pet
+          schema:
+            type: string
+      # requestBody:
+      #   required: true
+      #   description: Adoption data
+      #   content:
+      #     application/json:
+      #       schema:
+      #         $ref: '#/components/requestBody/createAdoption'
+      responses:
+        201:
+          description: Return New Adoption
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Adoptions'

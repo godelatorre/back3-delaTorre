@@ -1,0 +1,59 @@
+components:
+  schemas:
+    Users:
+      type: array
+      item:
+        properties:
+          _id:
+            type: ObjectId
+            description: User Id
+          first_name:
+            type: string
+            description: User's Name
+            required: true
+          last_name:
+            type: string
+            description: User's Lastname
+            required: true
+          email:
+            type: string
+            description: User's Email
+            required: true
+          password:
+            type: string
+            description: User's Password
+            required: true
+          role:
+            type: string
+            description: User's Role
+          pets:
+            type: array
+            description: List of Pets adopted by User
+      example:
+        _id: 5f7e9f9b5f7e9f9b5f7e9f9a
+        first_name: Usuario
+        last_name: del Futuro
+        email: example@email.com
+        password: '1234'
+  requestBody:
+    createUser:
+      type: object
+      properties:
+        first_name:
+          type: string
+          description: User's Name
+        last_name:
+          type: string
+          description: User's Lastname
+        email:
+          type: string
+          description: User's Email
+        password:
+          type: string
+          description: User's Password
+        role:
+          type: string
+          description: User's Role
+        pets:
+          type: array
+          description: List of Pets adopted by User

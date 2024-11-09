@@ -39,7 +39,7 @@ export class GenericRepository {
   delete = async uid => {
     try {
       await this.repository.findOneAndDelete(uid);
-      return 'pet has been deleted';
+      return 'Deleted Correctly';
     } catch (error) {
       console.error(`repository error:${error}`);
       throw new Error('internal server Error');

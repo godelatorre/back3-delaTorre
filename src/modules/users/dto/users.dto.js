@@ -1,7 +1,9 @@
 export const transformSingleUser = user => {
-  const { first_name, last_name, email } = user;
+  const { _id, first_name, last_name, email } = user;
   return {
-    user: first_name + ' ' + last_name,
+    _id,
+    first_name,
+    last_name,
     email,
   };
 };

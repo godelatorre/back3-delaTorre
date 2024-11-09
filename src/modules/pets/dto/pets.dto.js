@@ -1,11 +1,14 @@
 export const transformSinglePet = pet => {
-  const { name, specie, adopted } = pet;
+  const { _id, name, specie, adopted, birthDate } = pet;
   return {
+    _id,
     name,
     specie,
     adopted,
+    birthDate,
   };
 };
+
 export const transformArrayPets = array => {
   const transformedArray = array.map(p => {
     return transformSinglePet(p);

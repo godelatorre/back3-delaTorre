@@ -17,16 +17,16 @@ export class UserServices {
       throw new Error('internal server Error');
     }
   };
-
   createMany = async data => {
     try {
-      const savedUser = await userRepository.createMany(data);
-      return savedUser;
+      const savedUsers = await userRepository.createMany(data);
+      return savedUsers;
     } catch (error) {
       console.error(`services error:${error}`);
       throw new Error('internal server Error');
     }
   };
+
   getAllUsers = async () => {
     try {
       const users = await userRepository.getAll();
@@ -39,7 +39,6 @@ export class UserServices {
   getUser = async params => {
     try {
       const user = await userRepository.getByParam(params);
-
       return user;
     } catch (error) {
       console.error(`services error:${error}`);

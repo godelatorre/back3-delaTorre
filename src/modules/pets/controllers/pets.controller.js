@@ -15,6 +15,7 @@ export class PetsController {
       }
     }
   };
+
   getAllPets = async (req, res) => {
     try {
       const pets = await petsServices.getAllPets();
@@ -47,6 +48,7 @@ export class PetsController {
       }
     }
   };
+
   updatePet = async (req, res) => {
     try {
       const { pid } = req.params;
@@ -62,6 +64,7 @@ export class PetsController {
       }
     }
   };
+
   deletePet = async (req, res) => {
     try {
       const { pid } = req.params;

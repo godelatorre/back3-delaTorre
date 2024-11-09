@@ -1,0 +1,28 @@
+paths:
+  /api/users/{uid}:
+    put:
+      summary: Put User
+      description: Update a User
+      tags:
+        - Users
+      parameters:
+        - in: path
+          name: uid
+          required: true
+          description: Id User
+          schema:
+            type: string
+      requestBody:
+        required: true
+        description: User data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBody/createUser'
+      responses:
+        200:
+          description: Update User
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Users'
