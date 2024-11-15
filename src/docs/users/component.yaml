@@ -30,11 +30,11 @@ components:
             type: array
             description: List of Pets adopted by User
       example:
-        _id: 5f7e9f9b5f7e9f9b5f7e9f9a
-        first_name: Usuario
-        last_name: del Futuro
-        email: example@email.com
-        password: '1234'
+        _id: "670eab67ae2784760704dbdd"
+        first_name: "Davides"
+        last_name: "Porras Gallardo"
+        email: "Lucia3@hotmail.com"
+        password: "$2b$10$gdkfzcB5Eon10Hq5C/rjZuUSNCuEMqPu2zDcdHak.NH.zwL7BSFAi"
   requestBody:
     createUser:
       type: object

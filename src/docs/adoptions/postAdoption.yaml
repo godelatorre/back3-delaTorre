@@ -18,13 +18,7 @@ paths:
           description: ID Pet
           schema:
             type: string
-      # requestBody:
-      #   required: true
-      #   description: Adoption data
-      #   content:
-      #     application/json:
-      #       schema:
-      #         $ref: '#/components/requestBody/createAdoption'
+  
       responses:
         201:
           description: Return New Adoption

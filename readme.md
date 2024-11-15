@@ -1,1 +1,26 @@
-link de la imagen de docker en docker-hub:https://hub.docker.com/layers/matiasgomez/coderhouse-entregafinal/1.0.0/images/sha256-7426ac946fb4e20801aa1a28d1c6936dcf17d32d48c0a8ee11019237d249bc40?context=repo
+# Proyecto de Backend para Adopciones con MongoDB
+
+Este proyecto proporciona una API para gestionar un sistema de adopciones utilizando **MongoDB** como base de datos. La aplicación está diseñada para ser utilizada en un entorno de contenedores **Docker** para facilitar su despliegue.
+
+## Descripción
+
+La API permite realizar operaciones básicas de CRUD (crear, leer, actualizar y eliminar) sobre registros de adopciones de animales. Los datos se almacenan en MongoDB y el backend está construido en un framework adecuado como **Node.js** con **Express**.
+
+## Docker
+
+El contenedor Docker para este proyecto está disponible en [DockerHub](https://hub.docker.com/repository/docker/octavio445/adoption/general). Puedes utilizar este contenedor para ejecutar el backend de forma rápida y sencilla.
+
+## Tecnologías Usadas
+
+- **Node.js** - Backend en JavaScript
+- **Express** - Framework para la API
+- **MongoDB** - Base de datos NoSQL
+- **Docker** - Contenerización y despliegue
+
+## Requisitos Previos
+
+1. **Docker** instalado en tu máquina. Puedes seguir los pasos en la [documentación oficial de Docker](https://docs.docker.com/get-docker/) para instalarlo.
+2. **MongoDB** - La base de datos se puede ejecutar también dentro de un contenedor Docker si no deseas instalar MongoDB localmente.
+
+
+

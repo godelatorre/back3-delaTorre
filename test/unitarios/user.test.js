@@ -38,6 +38,7 @@ describe('Test User', () => {
 
     const user = await userRepository.create(newUser);
     userTest = user;
+    
     //Afirmación;
     expect(user).to.be.an('object');
     expect(user).to.have.property('_id');
