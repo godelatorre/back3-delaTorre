@@ -1,5 +1,5 @@
 # Definimos una imagen base de node y su versión para nuestro contenedor
-FROM node:16
+FROM node:20
 
 # Definimos el directorio de trabajo dentro del contenedor
 WORKDIR /app
@@ -7,14 +7,23 @@ WORKDIR /app
 # Copiamos el archivo package.json y package-lock.json a la carpeta de trabajo
 COPY package.json . 
 
-# Instalamos las dependencias del proyecto usando `npm ci` para evitar conflictos de dependencias
-RUN npm i
-
+RUN npm install bcryptjs
 # Copiamos el resto de los archivos a la carpeta de trabajo
 COPY . .
 
-# Exponemos el puerto de trabajo, en este caso el 8080
+# Exponemos el puerto 8080
 EXPOSE 8080
 
 # Definimos el comando para correr nuestra aplicación
-CMD ["npm", "run", "dev"]
+CMD ["npm", "start"]
+
+# Luego de crear el Dockerfile, debemos construir la imagen de nuestro contenedor
+# Para esto, debemos ejecutar el siguiente comando en la terminal:
+# docker build -t nombre-de-la-imagen . (reemplazar nombre-de-la-imagen por el nombre que quieras darle a tu imagen)
+
+# Una vez que la imagen se haya construido, podemos correr un contenedor a partir de ella
+# Para esto, debemos ejecutar el siguiente comando en la terminal:
+# docker run -p 8080:8080 nombre-de-la-imagen (reemplazar nombre-de-la-imagen por el nombre que le diste a tu imagen)
+
+# Loguearse con la cuenta de docker desde la consola
+# docker login
