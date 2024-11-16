@@ -7,8 +7,10 @@ Este proyecto proporciona una API para gestionar un sistema de adopciones utiliz
 La API permite realizar operaciones básicas de CRUD (crear, leer, actualizar y eliminar) sobre registros de adopciones de animales. Los datos se almacenan en MongoDB y el backend está construido en un framework adecuado como **Node.js** con **Express**.
 
 ## Docker
+ 
+ Este proyecto está disponible como una imagen de Docker, lo que facilita su despliegue y ejecución.
 
-El contenedor Docker para este proyecto está disponible en [DockerHub](https://hub.docker.com/repository/docker/octavio445/adoption/general). Puedes utilizar este contenedor para ejecutar el backend de forma rápida y sencilla.
+1. *Descargar la imagen de Docker*: [Docker Hub - octavio445/adoption](https://hub.docker.com/repository/docker/octavio445/adoption/general). Puedes utilizar este contenedor para ejecutar el backend de forma rápida y sencilla.
 
 ## Tecnologías Usadas
 
